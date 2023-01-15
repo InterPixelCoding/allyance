@@ -1,0 +1,121 @@
+.gallery {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gallery > div {
+    padding: 20px;
+}
+
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    width: 60vw;
+}
+
+.list li {
+    font-size: 2rem;
+    padding: 10px;
+}
+
+.images > div {
+    display: flex;
+    padding: 0;
+    margin: 10px;
+    width: 250px;
+    height: 250px;
+    background-color: #ffdbc1;
+}
+.images > div:nth-child(1) {background-image: url(./images/gallery1.jpg); background-position: center; background-size: cover;}
+.images > div:nth-child(2) {background-image: url(./images/gallery2.jpg); background-position: center; background-size: cover;}
+.images > div:nth-child(3) {background-image: url(./images/gallery3.jpg); background-position: center; background-size: cover;}
+.images > div:nth-child(4) {background-image: url(./images/gallery4.jpg); background-position: center; background-size: cover;}
+.images > div:nth-child(5) {background-image: url(./images/gallery5.jpg); background-position: center; background-size: cover;}
+
+@media screen and (max-width: 999px) {
+    .gallery {
+        flex-direction: column;
+    }
+
+    .images {
+        display: none;
+    }
+
+    .list > div:nth-child(even) {
+        width: 100%;
+        height: 0px;
+        filter: blur(5px);
+        opacity: 0;
+        transition: all 0.8s;
+    }
+    .music:hover + .music-image {
+        display: flex;
+        height: 200px;
+        opacity: 1;
+        filter: none;
+        transform: translateX(0);
+        background-image: url(./images/gallery1.jpg); background-position: center; background-size: cover;
+    }
+    .singing:hover + .singing-image {
+        display: flex;
+        height: 200px;
+        opacity: 1;
+        filter: none;
+        transform: translateX(0);
+        background-image: url(./images/gallery2.jpg); background-position: center; background-size: cover;
+    }
+    .sand:hover + .sand-image {
+        display: flex;
+        height: 200px;
+        opacity: 1;
+        filter: none;
+        transform: translateX(0);
+        background-image: url(./images/gallery3.jpg); background-position: center; background-size: cover;
+    }
+
+    .paints:hover + .paints-image {
+        display: flex;
+        height: 200px;
+        opacity: 1;
+        filter: none;
+        transform: translateX(0);
+        background-image: url(./images/gallery4.jpg); background-position: center; background-size: cover;
+    }
+
+    .drawing:hover + .drawing-image {
+        display: flex;
+        height: 200px;
+        opacity: 1;
+        filter: none;
+        transform: translateX(0);
+        background-image: url(./images/gallery4.jpg); background-position: center; background-size: cover;
+    }
+    .clay:hover + .clay-image {
+        display: flex;
+        height: 200px;
+        opacity: 1;
+        filter: none;
+        transform: translateX(0);
+        background-image: url(./images/gallery5.jpg); background-position: center; background-size: cover;
+    }
+    .puppets:hover + .puppets-image {
+        display: flex;
+        height: 200px;
+        opacity: 1;
+        filter: none;
+        transform: translateX(0);
+        background-image: url(./images/gallery1.jpg); background-position: center; background-size: cover;
+    }
+    .pebbles:hover + .pebbles-image {
+        display: flex;
+        height: 200px;
+        opacity: 1;
+        filter: none;
+        transform: translateX(0);
+        background-image: url(./images/gallery1.jpg); background-position: center; background-size: cover;
+    }
+}

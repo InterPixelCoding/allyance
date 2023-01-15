@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Yeseva+One&display=swap" rel="stylesheet">    <script src="https://kit.fontawesome.com/00c3160031.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="gallery.css">
+    <script src="script.js" defer></script>
+    <title>Allyance</title>
+</head>
+<body>
+    <header class="section">
+        <a href="index.html" class="home"><img max-width="100px" src="./images/logo.png"></a>
+        <div class="buttons">
+            <button class="contact">
+                <a href="contact-us.html"><h2>Contact Us</h2></a>
+            </button>
+            <div class="phoneMenu">
+                <button class="openMenu" onclick="openMenu()">
+                    <h2>Menu</h2>
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <nav class="topnav">
+            <div class="close">
+                <button class="closeMenu" onclick="closeMenu()">
+                <i class="fa-solid fa-xmark" id="close"></i>
+                </button>
+            </div>
+            <ul>
+                <a href="history.html">History</a>
+                <a href="about-us.html">About Us</a>
+                <div class="dropdown" data-dropdown>
+                    <button class="dropdown-menu" id="phoneButton" data-dropdown-button>
+                        <h4 data-dropdown-button>Therapy</h4>
+                        <i class="fa-solid fa-angle-down" data-dropdown-button></i>
+                    </button>
+                    <div class="content" id="contentPhone">
+                        <a href="person-centred.html">Person Centred Therapy</a>
+                        <a href="play.html">Play Therapy</a>
+                        <a href="music.html">Music Therapy</a>
+                        <a href="art.html">Art Therapy</a>
+                    </div>
+                </div>
+                <a href="parents.html">Parents Info</a>
+                <a href="school.html">School Info</a>
+                <a href="reflections.html">Reflections</a>
+                <a href="events.html">Events</a>
+                <a href="resources.html">Resources</a>
+            </ul>
+        </nav>
+        </div>
+    </header>
+    <div class="background section">
+        <div class="hover"></div>
+        <image class="background-image"></image>
+        <h1 class="site-page-name">Info for Parents</h1>
+    </div>
+    <nav class="horizontal">
+        <ul>
+            <a href="history.html">History</a>
+            <a href="about-us.html">About Us</a>
+            <div class="dropdown" data-dropdown>
+                <button class="dropdown-menu" id="dropbutton" data-dropdown-button>
+                    <h4 data-dropdown-button>Therapy</h4>
+                    <i class="fa-solid fa-angle-down" data-dropdown-button></i>
+                </button>
+                <div class="content" id="myDropdown">
+                    <a href="person-centred.html">Person Centred Therapy</a>
+                    <a href="play.html">Play Therapy</a>
+                    <a href="music.html">Music Therapy</a>
+                    <a href="art.html">Art Therapy</a>
+                </div>
+            </div>
+            <a href="parents.html">Parents Info</a>
+            <a href="school.html">School Info</a>
+            <a href="reflections.html">Reflections</a>
+            <a href="events.html">Events</a>
+            <a href="resources.html">Resources</a>
+        </ul>
+    </nav>
+    <div class="grow section" id="top">
+        <div class="contents"><h1 class="table">Table of Contents</h1></div>
+    </div>
+    <div class="grow section">
+        <h1 class="subheading hidden" id="What is a counselling session?">What is a counselling session?</h1>
+        <a class="back-to-top" href="#top">Back to top</a>
+        <p class="max-width hidden">Play is your child's natural medium of self-expression, essential for enabling them to develop
+            physically, emotionally and socially. It helps to develop their imagination and encourages creativity.
+            Used therapeutically and with different disciplines, and mediums such as:</p>
+        
+        <div class="gallery">
+            <div class="list">
+                <li class="music">a musical instrument</li>
+                <div class="music-image"></div>
+                <li class="singing">singing</li>
+                <div class="singing-image"></div>
+                <li class="sand">a sand tray</li>
+                <div class="sand-image"></div>
+                <li class="paints">paints</li>
+                <div class="paints-image"></div>
+                <li class="drawing">drawing equipment</li>
+                <div class="drawing-image"></div>
+                <li class="clay">clay</li>
+                <div class="clay-image"></div>
+                <li class="puppets">puppets</li>
+                <div class="puppets-image"></div>
+                <li class="pebbles">pebbles and shells</li>
+                <div class="pebbles-image"></div>
+            </div>
+            <div class="images">
+                <div class="hidden"></div>
+                <div class="hidden"></div>
+                <div class="hidden"></div>
+                <div class="hidden"></div>
+                <div class="hidden"></div>
+            </div>
+        </div>
+        <p class="max-width hidden">
+            Play offers the opportunity for children to help themselves by 'playing out' feelings and problems.
+        </p>
+        <p class="max-width hidden">
+            During the counselling session, a trusting relationship develops with the therapist, in which children
+            begin to feel safe enough to explore their difficulties and learn new ways of relating.
+        </p>
+        <p class="max-width hidden">
+            Many children encounter challenging events and experiences in their early lives, which may lead to
+            feelings of stress and anxiety. Children do not yet have the vocabulary or emotional maturity to
+            express their feelings or to make sense of them. In the session, they can play out some of these
+            anxieties and even find the words for them, or sometimes the process can be non-verbal.
+        </p>
+        <p class="max-width hidden">
+            What happens in a counselling session? The therapist depending on their discipline will have a “tool
+            kit” of equipment in the room. Sometimes your child will be guided towards a particular medium, or
+            sometimes they will be able to play with what they choose.
+        </p>
+        <p class="max-width hidden">
+            Whatever your child plays with, the therapist creates a safe, non-judgemental and confidential space
+            for them during the session which will enable the child to explore their difficult or confusing feelings.
+        </p>
+    </div>
+    <div class="grow section">
+        <h1 class="subheading hidden" id="Why are the sessions confidential?">Why are the sessions confidential?</h1>
+        <a class="back-to-top" href="#top">Back to top</a>
+        <p class="max-width hidden">When a child begins the session, it is key to the effective treatment of the therapy that the child feels
+            able to express their thoughts and feelings without feeling judged. A very important part of the therapy
+            is the building of trust in the therapeutic relationship and the creation of a “safe space” which exists
+            solely for the child and therapist.</p>
+        <p class="max-width hidden">Your child must feel safe, comfortable and understood. This type of trusting environment makes it
+            easier for your child to express his/her thoughts and feelings and to use the therapy in a useful way.
+            Experience shows that the creation of this trusting environment, can improve your child’s relationships
+            with others, including friends as well as family.</p>'
+        <p class="max-width hidden">At the start of counselling the therapist explains to the child in an age appropriate way the meaning of
+            confidentiality. From this your child will understand that they are free to talk to their parents/carers and
+            family about what they do in sessions, if they choose to do so. Parents/carers are encouraged to be
+            curious and interested whilst being sensitive to how much the child may want to share from their sessions. 
+            The therapist will not disclose specific details of what your child has played. This is
+            important in order to maintain your child’s trust and feelings of safety with the therapist.</p>
+        <p class="max-width hidden">
+            There are of course, exceptions to maintaining confidentiality. If your child were to disclose something
+            which might put your child or any other child at risk, then the therapist would speak to the
+            headteacher and parents/carers.
+        </p>
+        <h1 class="subheading hidden" id="What can parents/carers do to help?">What can parents/carers do to help?</h1>
+        <a class="back-to-top" href="#top">Back to top</a>
+        <p class="max-width hideen">You are very important in supporting your child through the counselling process and it is crucial that
+            your child knows that you are supporting this. Be consistent and encouraging to your child about
+            attending the counselling sessions regularly. Try to resist the urge to ask your child what they did in
+            the session as this may make them feel pressurised to comment on something they may not yet
+            understand themselves.</p>
+        <h1 class="subheading hidden" id="What can parents/carers expect in terms of feedback?s">What can parents/carers expect in terms of feedback?</h1>
+        <a class="back-to-top" href="#top">Back to top</a>
+        <p class="max-width hideen">The therapist can talk to you about how well the child is engaging with the therapy and the sorts of
+            activities your child is taking part in. You will have the opportunity to discuss any changes or
+            developments that you have witnessed or experienced at home. The therapist may also be able to
+            talk about some of the themes emerging from the sessions and any changes the therapist may have
+            noticed as the therapy progresses</p>
+    </div>
+</body>
+</html>

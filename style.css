@@ -1,0 +1,611 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.section {
+    border-bottom: #FF6B00;
+    border-bottom-style: solid;
+    border-width: 3px;
+    box-shadow: 0 5px 5px rgba(255, 140, 0, 0.238);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    opacity: 70%;
+    transition: all 0.2s ease-in-out;
+}
+
+a:hover {
+    opacity: 100%;
+}
+
+.grow {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    width: 100vw;
+    padding: 1vw;
+}
+
+h1 {font-size: 2.5rem}
+h2 {font-size: 1.5rem}
+h3 {font-size: 1.2rem}
+h4, a {font-size: 1.8rem}
+h1, h2, h3, h4, h5 {
+    font-family: 'Raleway', sans-serif;
+}
+
+.allyance {
+    color: #FF6B00;
+    font-weight: 600;
+}
+
+.contents {
+    display: flex;
+    flex-direction: column;
+}
+
+.back-to-top {
+    position: relative;
+    padding: inherit;
+    margin: inherit;
+    opacity: 0.25;
+}
+
+.home > img {
+    width: 200px;
+}
+
+li, .contents > a{
+    width: fit-content;
+    border-radius: 3px;
+    font-size: 1.5rem;
+    text-align: left;
+    padding: 10px 50px 20px 50px;
+    list-style-type: none;
+    background: white;
+    opacity: 1;
+    transform: scale(1);
+    transition: all 0.5s ease-in-out;
+
+}
+
+li::before, .contents > a::before {
+    content: url(./svgs/bulletpoint.svg);
+    text-align: center;
+    transform: scale(0.1);
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+li:hover::before, .contents > a:hover::before{
+    filter: brightness(0)
+}
+
+li:hover, .contents > a:hover {
+    z-index: 20;
+    transform: scale(1.025);
+}
+
+li.hidden {
+    transition-delay: calc(5ms * var(--order));
+}
+
+p {
+    padding: 20px;
+    font-size: 1.5rem;
+    line-height: 30px;
+}
+
+p.max-width {
+    padding: 20px;
+    max-width: 1500px;
+    line-height: 2rem;
+}
+
+a.inner-p, a.inner-p:hover, a.inner-p:focus {
+    opacity: 100;
+    font-size: inherit;
+    text-decoration: underline black;
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transition: all .5s ease-in-out;
+}
+
+
+.show {
+    opacity: 1;
+    transform: translateX(0px);
+    pointer-events: all;
+}
+
+@media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+}
+
+button {
+    font-size: 1.2rem;
+    color: #FF6B00;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border-color: #FF6B00;
+    border-style: solid;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #FF6B00;
+    color: white;
+}
+
+header a {
+    opacity: 100%;
+    color: #FF6B00;
+}
+
+.contact:hover > a{
+    color: white;
+}
+
+header {
+    display: flex;
+    height: auto;
+    padding: 20px;
+    width: 100vw;
+    background: white;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+@media screen and (min-width: 458px) {
+    header {
+        height: 100vh;
+        animation: forwards on-page-load 2s 1.2s;
+    }
+    header > a > img {
+        transform: translate(0);
+        border-radius: 20%;
+        animation: on-page-load-center 2s;
+    }
+}
+
+@keyframes on-page-load-center {
+    0%, 30% {
+        width: 500px;
+        transform: translateX(50%);
+    }
+
+    100% {
+        width: 200px;
+        transform: translate(0);
+    }
+}
+
+@keyframes on-page-load {
+    from {
+        height: 100vh
+    }
+    to {
+        height: 101.81px
+    }
+}
+
+@keyframes page-load {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+header .phoneMenu, header nav{
+    display: none;
+}
+
+header h1, header h2{
+    font-weight: 400;
+}
+
+header > * {
+    display: flex;
+}
+
+header > *:not(.home) {
+    animation: page-load 3s ease-in-out;
+}
+
+.hover {
+    position: absolute;
+    z-index: 5;
+    width: 100vw;
+    height: 500px;
+    background: rgba(0, 0, 0, 0.403);
+    transition: background 0.6s ease-in-out;
+}
+
+.hover:hover{
+    background: rgba(255, 255, 255, 0);
+}
+
+.background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 10px;
+}
+
+.background-image {
+    display: flex;
+    z-index: -10;
+    width: 100vw;
+    height: 500px;
+    object-fit: cover;
+    background-color: rgba(255, 140, 0, 0.238);
+    border-bottom: solid #FF6B00 3px;
+    background-position: center;
+}
+
+.site-page-name{
+    position: absolute;
+    text-align: center;
+    color: white;
+    font-size: 6rem;
+    z-index: 10;
+    text-shadow: 0px 10px 20px black;
+}
+
+.quote-text {
+    letter-spacing: 0.8px;
+    font-size: 3.5rem;
+    font-weight: 500;
+    padding: 50px;
+    color: black;
+    opacity: 90%;
+}
+
+span.name {
+    font-size: inherit;
+    opacity: 60%;
+    font-weight: 200;
+}
+
+.quote {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    background: #ffd8bb;
+}
+
+nav {
+    display: flex;
+    padding: 20px 75px 0 75px;
+}
+
+nav ul{
+    width: 100vw;
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+#dropbutton{
+    display: flex;
+    justify-content: space-around;
+
+    align-items: center;
+    width: 150px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    padding: auto;
+    color: black;
+    opacity: 70%;
+    border-radius: 0px;
+    transition: all 0.1s ease-in-out;
+}
+
+nav ul button:hover {
+    background: white;
+    color: black;
+    opacity: 100%;
+}
+
+nav ul button h4 {
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.content {
+    position: absolute;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    transform: translateY(-20px);
+    pointer-events: none;
+    opacity: 0%;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.102);
+
+    transition: 0.3s ease-in-out;
+}
+
+.dropdown.active > .dropdown-menu + .content{
+    opacity: 100%;
+    transform: translateY(0px);
+    pointer-events: all;
+}
+
+.coming-soon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.coming-soon > h1 {
+    font-size: 5rem;
+}
+
+.coming-soon > * {
+    padding: 35px;
+    text-align: center;
+}
+
+.content a {
+    font-size: 1.3rem;
+    width: fit-content;
+}
+
+h1.subheading, h1.table{
+    padding: 15px;
+    font-size: 3.5rem;
+    font-weight: 500;
+    display: flex;
+    text-align: center;
+}
+
+.dropdown {
+    z-index: 100;
+}
+
+.horizontal ul a {
+    color: black;
+    font-weight: 500;
+}
+
+.horizontal ul .dropdown .dropdown-menu:hover {
+    opacity: 100%
+}
+
+.horizontal ul a::after, .horizontal ul .dropdown::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    border-radius: 5px;
+    background: black;
+    transition: width .3s;
+}
+
+#dropbutton:hover {
+    opacity: 100%;
+}
+
+#dropbutton h4 {
+    font-weight: 500;
+}
+
+.horizontal ul a:hover::after, .horizontal ul .dropdown:hover::after {
+    width: 100%;
+}
+
+@media screen and (max-width: 1200px){
+
+    .grow h1, .quote h1, .contents > h1, .quote h1::after {
+        font-size: 2.5rem;
+    }
+
+    .quote h1 {
+        padding: 20px;
+    }
+
+    .close {
+        top: 10px;
+        right: 30px;
+        position: absolute;
+    }
+
+    .close button {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 2rem;
+    }
+
+    h1{font-size: 2rem}
+
+    .buttons {
+        display: flex;
+        width: 280px;
+        justify-content: space-between;
+    }
+
+    header .phoneMenu {
+        display: flex;
+    }
+
+    .openMenu {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 115px;
+        flex-direction: row;
+    }
+
+    .horizontal {
+        display: none;
+    }
+
+    .dropdown {
+        display: flex;
+        justify-content: center;
+    }
+
+    .topnav {
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        top: -100%;
+        left: 0;
+        height: 100vh;
+        padding: 0;
+        z-index: 20;
+        backdrop-filter: blur(5px);
+        background-color: rgba(0, 0, 0, 0.66);
+        transition: all 0.7s ease;
+    }
+
+    .dropdown-menu, .dropdown-menu:hover {
+        align-items: center;
+        display: flex;
+        padding: 0;
+        background: none;
+        color: white;
+        border: none;
+    }
+
+    .dropdown-menu > * {
+        padding: 0 5px 0 5px
+    }
+
+    .dropdown-menu h4 {    
+        font-weight: 500;
+    }
+
+    .topnav ul {
+        height: 80vh;
+        left: 0;
+        width: 100vw;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .topnav ul a {
+        color: white;
+        font-weight: 500;
+    }
+
+    .topnav ul a::after, .dropdown:hover::after{
+        content: '';
+        display: block;
+        width: 0;
+        height: 3px;
+        border-radius: 5px;
+        background: white;
+        transition: width .3s;
+    }
+
+    .topnav ul a:hover::after,.dropdown:hover::after {
+        width: 100%;
+    }
+
+    #contentPhone {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        margin-top: 50px;
+        height: auto;
+        background: none;
+        border-radius: 5px;
+        box-shadow: none;
+        background-color: black;
+    }
+
+    #contentPhone > * {
+        width: fit-content;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 458px) {
+
+    .site-page-name {
+        font-size: 4rem;
+    }
+
+    .grow h1, .quote h1, .quote h1::after, .table {
+        font-size: 2rem;
+    }
+
+    .quote h1 {
+        padding: 20px;
+    }
+
+    header {
+        justify-content: space-evenly;
+        flex-direction: column;
+        height: 25vh;
+    }
+
+    header h1 {
+        margin-top: 2vh;
+    }
+
+    .buttons {
+        padding: 10px;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .buttons > * {
+        margin: 10px;
+    }
+
+    .openMenu h2 {
+        display: none;
+    }
+    .openMenu {
+        width: 50px;
+        border-style: none;
+        font-size: 2rem;
+    }
+
+    .background-image, .hover {
+        height: 55vh;
+    }
+
+    .background-image h2 {
+        font-size: 3.5rem;
+    }
+
+    .dropdown.active > .dropdown-menu + .content {
+        margin-bottom: 160px;
+    }
+}

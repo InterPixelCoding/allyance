@@ -1,0 +1,105 @@
+:root {
+    --abby: #2D6A43;
+    --ellie: #3D7BC0;
+    --amy: #8C47C2;
+    --helen: #BB1A1A;
+    --karen: #FFFD58;
+}
+
+.team {
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.team > div {
+    width: 330px;
+    margin: 15px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(calc(-50px * var(--order)));
+    filter: blur(5px)
+}
+
+.team > div > h1 {
+    text-align: center;
+}
+
+.team-section {
+    justify-content: center;
+    align-items: center;
+}
+
+.team > div > p {
+    font-size: 1.3rem;
+    line-height: normal;
+    text-align: center;
+    max-height: 500px;
+    overflow: hidden;
+    background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 50%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: all 1s ease-in-out;
+}
+
+.team > div > img {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 20px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 3px;
+    box-shadow: 0 0 8px black;;
+}
+
+.read-more {
+    display: flex;
+    color: black;
+    border: none;
+    opacity: 0.5;
+    background: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.read-more-text {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.read-more > i {
+    font-size: 1.5rem;
+}
+
+.read-more:hover {
+    opacity: 1;
+    background: white;
+    color: black;
+}
+
+.team > div > p.show-less {
+    max-height: 1000px;
+    background: none;
+    color: black;
+    transition: max-height 1s ease-in-out;
+}
+
+.abby img{border-color: var(--abby)}
+.ellie img{border-color: var(--ellie)}
+.helen img{border-color: var(--helen)}
+.karen img{border-color: var(--karen)}
+.amy img{border-color: var(--amy)}
+
+.team div.show {
+    transition: all 1s ease-out;
+    transition-delay: calc(300ms * var(--order));
+    transform: translateX(0px);
+    filter: none;
+}

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Yeseva+One&display=swap" rel="stylesheet">    <script src="https://kit.fontawesome.com/00c3160031.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Allyance</title>
+</head>
+<body>
+    <header class="section">
+        <a href="index.html" class="home"><img max-width="100px" src="./images/logo.png"></a>
+        <div class="buttons">
+            <button class="contact">
+                <a href="contact-us.html"><h2>Contact Us</h2></a>
+            </button>
+            <div class="phoneMenu">
+                <button class="openMenu" onclick="openMenu()">
+                    <h2>Menu</h2>
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <nav class="topnav">
+            <div class="close">
+                <button class="closeMenu" onclick="closeMenu()">
+                <i class="fa-solid fa-xmark" id="close"></i>
+                </button>
+            </div>
+            <ul>
+                <a href="history.html">History</a>
+                <a href="about-us.html">About Us</a>
+                <div class="dropdown" data-dropdown>
+                    <button class="dropdown-menu" id="phoneButton" data-dropdown-button>
+                        <h4 data-dropdown-button>Therapy</h4>
+                        <i class="fa-solid fa-angle-down" data-dropdown-button></i>
+                    </button>
+                    <div class="content" id="contentPhone">
+                        <a href="person-centred.html">Person Centred Therapy</a>
+                        <a href="play.html">Play Therapy</a>
+                        <a href="music.html">Music Therapy</a>
+                        <a href="art.html">Art Therapy</a>
+                    </div>
+                </div>
+                <a href="parents.html">Parents Info</a>
+                <a href="school.html">School Info</a>
+                <a href="reflections.html">Reflections</a>
+                <a href="events.html">Events</a>
+                <a href="resources.html">Resources</a>
+            </ul>
+        </nav>
+        </div>
+    </header>
+    <div class="background section">
+        <div class="hover"></div>
+        <image class="background-image"></image>
+        <h1 class="site-page-name">Info for Schools</h1>
+    </div>
+    <nav class="horizontal">
+        <ul>
+            <a href="history.html">History</a>
+            <a href="about-us.html">About Us</a>
+            <div class="dropdown" data-dropdown>
+                <button class="dropdown-menu" id="dropbutton" data-dropdown-button>
+                    <h4 data-dropdown-button>Therapy</h4>
+                    <i class="fa-solid fa-angle-down" data-dropdown-button></i>
+                </button>
+                <div class="content" id="myDropdown">
+                    <a href="person-centred.html">Person Centred Therapy</a>
+                    <a href="play.html">Play Therapy</a>
+                    <a href="music.html">Music Therapy</a>
+                    <a href="art.html">Art Therapy</a>
+                </div>
+            </div>
+            <a href="parents.html">Parents Info</a>
+            <a href="school.html">School Info</a>
+            <a href="reflections.html">Reflections</a>
+            <a href="events.html">Events</a>
+            <a href="resources.html">Resources</a>
+        </ul>
+    </nav>
+    <div class="grow section" id="top">
+        <div class="contents"><h1 class="table">Table of Contents</h1></div>
+    </div>
+    <div class="grow section">
+        <h1 class="subheading hidden" id="background">Background</h1>
+        <a class="back-to-top" href="#top">Back to top</a>
+        <p class="max-width hidden">allyance is a social enterprise not for profit in-school counselling service. It was originally formed in April
+            2009 by schools in the CABMAG (Comberton, Bassingbourn, Melbourn and Gamlingay) area as a
+            response to the lack of high-level mental health support for children who were experiencing or had
+            experienced difficult life events, particularly those of primary age. The schools agreed to pool funding
+            in order to use economies of scale to provide an enhanced and flexible service. With support from the
+            Local Authority, latterly in the form of the Dedicated Schools Grant, schools within the allyance
+            cluster are able to access high quality counselling at a subsidised rate. Through our network of
+            counsellors allyance also provides services for schools outside the cluster to buy into.</p>
+    </div>
+    <div class="grow section">
+        <h1 class="subheading hidden" id="Our Team">Our Team</h1>
+        <a class="back-to-top" href="#top">Back to top</a>
+        <p class="max-width hidden">The allyance clinical team consists of representatives from different therapeutic disciplines and
+            includes:</p>
+        <li>A Clinical Supervisor</li>
+        <li>A Music Therapist</li>
+        <li>Play Therapists</li>
+        <li>Psychodynamic Counsellors</li>
+        <p class="max-width hidden">The therapists are a strong and stable professional team who all share the same vision and
+            commitment to allyance. They have a lot of experience of working in primary schools and therefore
+            understand the institutional context of working in an education setting, including liaison with relevant
+            staff and parents. They can also attend multi-agency meetings where appropriate.</p>
+    </div>
+    <div class="grow section">
+        <h1 class="subheading hidden" id="Accreditation, Safeguarding and Supervision">Accreditation, Safeguarding and Supervision</h1>
+        <a class="back-to-top" href="#top">Back to top</a>
+        <p class="max-width hidden">All members of the allyance team are accredited by the relevant professional body according to their
+            qualifications, e.g. PTUK (Play Therapy United Kingdom), UKCP (UK Council for Psychotherapy),
+            BACP (British Association of Counselling and Psychotherapy), BAMT (British Association of Music
+            Therapy). As a part of their accreditation and membership they receive professional supervision from
+            these bodies. This complements the half-termly group allyance-specific sessions run by our clinical
+            supervisor which allow them to reflect on current cases.</p>
+        <p class="max-width hidden">
+            Annual safeguarding / child protection training is delivered by <a href="https://www.safecic.co.uk/" target="_blank" rel="noopener noreferrer" class="inner-p">www.safecic.co.uk</a> who also oversee
+            DBS checks. Therapists also receive a set of safeguarding documents to complement this training.
+            Allyance schools are also responsible for providing their counsellors relevant specific Child
+            Protection / Safeguarding information about their school each September.
+        </p>
+    </div>
+    <div class="grow section">
+        <h1 class="subheading hidden" id="Governance and Oversight">Governance and Oversight</h1>
+        <a class="back-to-top" href="#top">Back to top</a>
+        <p class="max-width hidden">
+            The running of allyance is overseen by a steering group which includes cluster headteachers. The
+            steering group meets termly to discuss finances / accounts, training of counsellors, (anonymised)
+            pupils in counselling etc. The steering group also oversee the work of the allyance coordinator, who
+            works with the clinical supervisor to deploy the team of counsellors and therapists.</p>
+        <h1 class="subheading hidden" id="The allyance model in practice...">The allyance model in practice...</h1>
+        <li>Each school pays in a set amount to receive an agreed level of counselling/support. (see
+            section below).</li>
+        <li>Schools in consultation with therapists decide how to use their allocated time – referrals
+            typically come through the Headteacher or SENDCO. Sessions are one hour long, this
+            includes face to face client time, report writing and on occasions liaising with school staff.</li>
+        <li>Allyance counselling is based on need rather than a fixed number of sessions.</li>
+        <li>Sometimes it may be appropriate for a counsellor to meet with the parents before the sessions
+            commence.</li>
+        <li>Each counsellor will start and end with a strengths and difficulties questionnaire completed by
+            child, parents and school. This is then repeated approximately 6 weeks after therapy sessions
+            have started to inform discussions about the progress.</li>
+        <li>Counsellors will liaise with school staff regarding any potential strategies which might support
+            the young person.</li>
+        <li>Where appropriate, counsellors will help year 6 students to prepare for transition to secondary
+            school. In some cases they may continue to support the young person for a short time after
+            they have transferred to Year 7.</li>
+    </div>
+    <div class="grow section">
+        <h1 class="subheading hidden" id="Counselling Packages">Counselling Packages</h1>
+        <a class="back-to-top" href="#top">Back to top</a>
+        <p class="max-width hidden">
+            Please email Ann Jones at ajones@melbournvc.org to find out the current rates.
+        </p>
+        <li>The costs include travel and supervision.</li>
+        <li>Schools within the Bassingbourn and Melbourn clusters may take advantage of a slightly
+            reduced.</li>
+        <p class="max-width hidden">
+            In cases where extra counselling hours are required during the year, allyance will aim to use its
+            overall size and flexibility to support the relevant child/school. In addition to 1:1 counselling we can
+            offer bespoke packages tailored to the needs of individual schools. (This is not a definitive list if a
+            school has a particular request where possible we would be happy to accommodate).
+        </p>
+        <p class="max-width hidden">
+            Working with school staff on areas such as:
+        </p>
+        <li>Wellbeing Supervision</li>
+        <li>Mental Health Awareness</li>
+        <p class="max-width hidden">
+            Group Work with Children on areas such as:
+        </p>
+        <li>Friendships</li>
+        <li>Self Esteem</li>
+        <h1 class="subheading hidden" id="More Details">More Details</h1>
+        <a class="back-to-top" href="#top">Back to top</a>
+        <p class="max-width hidden">For more information, please contact our coordinator, Ann Jones: <a href="mailto:ajones@melbournvc.org" target="_blank" rel="noopener noreferrer" class="inner-p">ajones@melbournvc.org</a></p>
+    </div>
+</body>
+</html>

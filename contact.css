@@ -1,0 +1,51 @@
+form {
+    height: auto;
+    display: flex;
+    padding: 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.credentials > input{
+    width: 39vw;
+}
+
+form > div > * {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5rem;
+    padding: 15px;
+    margin: 1vw;
+    border-radius: 5px;
+    border: black 2px solid;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.306);
+    transition: all 0.2s ease-in-out;
+}
+
+form > div > *:hover, form > button:hover{
+    border: #FF6B00 2px solid;
+    background: transparent;
+    box-shadow: 0 5px 10px #ff6a008a;
+}
+
+form > div > *:focus {
+    background-color: #ff6a001c;
+}
+
+textarea {
+    width: 80vw;
+    height: 500px;
+    font-size: 0.5rem;
+}
+
+form > button {
+    color: black;
+    font-family: inherit;
+    font-size: 1.5rem;
+    border-color: black;
+    right: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.306);
+}
+
+form > button:hover{color:#FF6B00}
+

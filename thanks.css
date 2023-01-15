@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background:#fffcfa;
+}
+
+.thank-you {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.thank-you > * {
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    overflow: hidden;
+    color: #FF6B00;
+    font-size: 5rem;
+    font-weight: 800;
+    animation: fade 1s ease-in-out;
+}
+
+p {
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 2rem;
+    animation: typing 5s steps(83, end);
+}
+
+a {
+    font-size: 2rem;
+    text-decoration: none;
+    opacity: 0.5;
+    color: black;
+    animation: home 4s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
+}
+
+a:hover {
+    opacity: 1;
+}
+
+@keyframes fade {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0px;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes home {
+    0% {
+        transform: scale(0%);
+    }
+    90% {
+        transform: scale(0%);
+    }
+    100% {
+        transform: scale(100%);
+    }
+}
+
+@media screen and (max-width: 1300px){
+    p {
+        font-size: 2rem;
+        white-space: normal;
+        animation: none;
+    }
+    a {
+        animation: none;
+    }
+}
