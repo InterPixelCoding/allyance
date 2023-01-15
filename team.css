@@ -21,7 +21,6 @@
     align-items: center;
     justify-content: center;
     transform: translateX(calc(-50px * var(--order)));
-    filter: blur(5px)
 }
 
 .team > div > h1 {
