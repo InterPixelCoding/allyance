@@ -280,7 +280,7 @@ header > *:not(.home) {
 
 .quote-text {
     letter-spacing: 0.8px;
-    font-size: 3.5rem;
+    font-size: 2.25rem;
     font-weight: 500;
     padding: 50px;
     color: black;
@@ -425,7 +425,7 @@ h1.subheading, h1.table{
 @media screen and (max-width: 1200px){
 
     .grow h1, .quote h1, .contents > h1, .quote h1::after {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .quote h1 {
