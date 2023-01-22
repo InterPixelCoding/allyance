@@ -1,0 +1,23 @@
+.poem {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+    text-align: center;
+    padding: 2em;
+}
+
+.poem-title {
+    padding-bottom: 1em;
+}
+
+.poem-stanza {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5rem;
+}
+.info {
+    font-style: italic;
+    font-weight: bold;
+}
