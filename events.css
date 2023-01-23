@@ -1,0 +1,109 @@
+:root {
+    --coral: #FF6B00;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
+
+.max-height {
+    margin-top: 2%;
+    padding-left: 5%;
+    display: flex;
+    flex-direction: row;
+}
+
+.max-height > .line {
+    width: 5px;
+    background: var(--coral)
+}
+
+.timeline > .timeline-item {
+    margin-left: 3em;
+    max-width: 80%;
+}
+
+.timeline > .timeline-item > span {
+    font-size: 1.5rem;
+}
+
+.timeline-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.timeline h1, .timeline a {
+    opacity: 1;
+    font-size: 2.5rem;
+}
+
+.timeline-item::before {
+    position: absolute;
+    content: '';
+    width: 3rem;
+    aspect-ratio: 1;
+    border: 3px var(--coral) solid;
+    border-radius: 50%;
+    box-shadow: 0 0 0 7px white;
+    transform: translateX(calc(-3em - 53%));
+    background: white;
+
+    transition: background 200ms ease-in-out;
+}
+
+.timeline-item > p {
+    padding: 0;
+}
+
+.timeline-item > .location::before {
+    font-size: 1.5rem;
+    margin-right: 15px;
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 700;
+    content: "\f3c5";
+}
+
+.timeline-item > .date::before {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 300;
+    content: "\f073";
+}
+
+.timeline-item:hover::before {
+    background: var(--coral)
+}
+
+h1.today {
+    font-size: 2.5rem;
+}
+
+.timeline-item > a::after {
+    padding: .75rem;
+    font-size: 2rem;
+    margin-right: 10px;
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900;
+    content: "\f061";
+}
+
+.today:target {
+    animation: forwards today-load 1.25s ease-in-out;
+}
+
+@keyframes today-load {
+    0% {
+        color: black;
+    }
+    50% {
+        color: var(--coral);
+    }
+    100% {
+        color: black;
+    }
+}
+
