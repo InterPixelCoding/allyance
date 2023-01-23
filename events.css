@@ -57,6 +57,7 @@
 
 .timeline-item > p {
     padding: 0;
+    max-width: 50%;
 }
 
 .timeline-item > .location::before {
