@@ -107,3 +107,15 @@ h1.today {
     }
 }
 
+@media (max-width: 700px) {
+    .timeline-item a, .timeline-item a::after{
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+    .max-height {
+        padding-top: 2%;
+        padding-left: 10%;
+    }
+    .timeline-item > h1 {font-size: 2rem}
+}
+
