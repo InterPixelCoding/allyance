@@ -427,6 +427,16 @@ h1.subheading, h1.table{
     width: 100%;
 }
 
+@media (max-width: 1400px) {
+    .horizontal a, .horizontal h4, .horizontal i{
+        font-size: 1.6rem;
+    }
+
+    .horizontal {
+        padding: 20px 25px;
+    }
+}
+
 @media screen and (max-width: 1200px){
 
     .grow h1, .quote h1, .contents > h1, .quote h1::after {
