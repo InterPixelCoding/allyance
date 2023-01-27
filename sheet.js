@@ -42,13 +42,22 @@ fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}/values:ba
 
       // Create a button to load pdf in iframe
       if(columns[i][5]!= null) {
-        const iframeButton = document.createElement('button')
-        const iframe = document.querySelector('.pdfView')
+        const iframeButton = document.createElement('button');
+        const iframe = document.querySelector('.pdfView');
+        const iframeContainer = document.querySelector('.pdf-container');
+        const closebtn = document.querySelector('.close-btn');
+        const downloadButton = document.querySelector('.download-btn')
         iframeButton.textContent = "View Full Event"
           iframeButton.addEventListener("click", function () {
-            iframe.classList.toggle('open')
+            iframeContainer.classList.add('open')
             iframe.src = `./resources/${columns[i][5]}.pdf#view=Fit&toolbar=0&statusbar=0&messages=0&navpanes=0&scrollbar=0`;
+            downloadButton.href =  `./resources/${columns[i][5]}.pdf`;
+            downloadButton.download = `${columns[i][5]}.pdf`;
           })
+
+        closebtn.addEventListener("click", function() {
+          iframeContainer.classList.remove('open')
+        })
         newTimelineItem.appendChild(iframeButton)
       }
       // Add the new timeline item to the map

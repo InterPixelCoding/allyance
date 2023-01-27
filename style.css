@@ -392,7 +392,7 @@ h1.subheading, h1.table{
 }
 
 .dropdown {
-    z-index: 100;
+    z-index: 10;
 }
 
 .horizontal ul a {
