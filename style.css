@@ -137,7 +137,6 @@ a.inner-p, a.inner-p:hover, a.inner-p:focus {
 
 .show {
     opacity: 1;
-    transform: translateX(0px);
     pointer-events: all;
 }
 

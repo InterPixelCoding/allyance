@@ -23,7 +23,7 @@
 
 .timeline > .timeline-item {
     margin-left: 3em;
-    max-width: 80%;
+    width: auto;
 }
 
 .timeline > .timeline-item > span {
@@ -84,6 +84,10 @@ h1.today {
     font-size: 2.5rem;
 }
 
+.timeline-item > button {
+    width: fit-content;
+}
+
 .timeline-item > a::after {
     padding: .75rem;
     font-size: 2rem;
@@ -120,4 +124,23 @@ h1.today {
     }
     .timeline-item > h1 {font-size: 2rem}
 }
+
+iframe {
+    display: none;
+    opacity: 0;
+}
+
+iframe.open {
+    opacity: 1;
+    display: flex;
+    margin: 0 5%;
+    width: 2500px;
+    height: calc(2500px * (.4));
+    overflow: hidden;
+}
+
+.iframe:hover {
+    box-shadow: 0 0 0 100px black;
+}
+
 

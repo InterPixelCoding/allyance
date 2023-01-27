@@ -39,7 +39,18 @@ fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}/values:ba
       const summarySpan = document.createElement('p');
       summarySpan.textContent = `Aim: ${columns[i][3]}`;
       newTimelineItem.appendChild(summarySpan);
-      
+
+      // Create a button to load pdf in iframe
+      if(columns[i][5]!= null) {
+        const iframeButton = document.createElement('button')
+        const iframe = document.querySelector('.pdfView')
+        iframeButton.textContent = "View Full Event"
+          iframeButton.addEventListener("click", function () {
+            iframe.classList.toggle('open')
+            iframe.src = `./resources/${columns[i][5]}.pdf#view=Fit&toolbar=0&statusbar=0&messages=0&navpanes=0&scrollbar=0`;
+          })
+        newTimelineItem.appendChild(iframeButton)
+      }
       // Add the new timeline item to the map
       timelineItems.set(newTimelineItem, dateSpan.textContent);
     }
@@ -85,7 +96,14 @@ fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}/values:ba
     sortedTimelineItems.forEach(function(item) {
         timeline.appendChild(item[0]);
     });
+
   })
+
+
+
+
+
+
 
   
 

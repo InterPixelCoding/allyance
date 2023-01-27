@@ -27,9 +27,6 @@ document.addEventListener("click", e => {
 	})
   })
 
-
-	console.log(document.querySelectorAll('.back-to-top'))
-
 function openMenu () {
   document.querySelector('.topnav').style.top = '0'
   document.querySelector('.topnav').style.opacity = '1'
@@ -54,20 +51,24 @@ function Change(word) {
   
 Change('allyance');
 
-// animate in on scroll
-const observer = new IntersectionObserver((entries) => {
-	entries.forEach((entry => {
-		console.log(entry)
-		if (entry.isIntersecting) {
-			entry.target.classList.add('show');
-		} else {
-			entry.target.classList.remove('show');
-		}
-	}))
-})
+window.addEventListener('DOMContentLoaded', (event) => { 
+	console.log('Website fully loaded')
+	// animate in on scroll
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach((entry => {
+			console.log(entry)
+			if (entry.isIntersecting) {
+				entry.target.classList.add('show');
+			} else {
+				entry.target.classList.remove('show');
+			}
+		}))
+	})
 
-const hiddenElements = document.querySelectorAll('.hidden');
-hiddenElements.forEach((el) => observer.observe(el));
+	const hiddenElements = document.querySelectorAll('.hidden');
+	hiddenElements.forEach((el) => observer.observe(el));
+
+});
 
 // table of contents
 const headings = document.querySelectorAll('.subheading');
@@ -109,4 +110,3 @@ function amy() {
 	const amymore = document.querySelector('.amy > p');
 	amymore.classList.toggle('show-less')
 }
-
