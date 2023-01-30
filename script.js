@@ -59,7 +59,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
 			console.log(entry)
 			if (entry.isIntersecting) {
 				entry.target.classList.add('show');
-			} else {
+			} 
+			else if (entry.target.classList.contains('poem-stanza') == false) {
 				entry.target.classList.remove('show');
 			}
 		}))
