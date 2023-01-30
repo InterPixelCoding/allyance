@@ -156,7 +156,7 @@ allyance Counsellor</pre>
     <script>
         const stanzas = document.querySelectorAll('.poem-stanza');
         stanzas.forEach(function (stanza, i) {
-            stanza.style.animationDelay = `${(i-1) * 5}s`;
+            stanza.style.transitionDelay = `${(i-1) * 1}s`;
         });
         const iframeContainer = document.querySelector('.pdf-container')
         const iframe = document.querySelector('.pdfView');

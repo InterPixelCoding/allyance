@@ -36,17 +36,8 @@
 }
 
 .poem-stanza.show:not(.poem-title) {
-    overflow: hidden;
-    max-height: 0px;
-    animation: forwards slow-reveal 5s;
-    animation-timing-function: steps(4, end);
+    transition: ease-in-out 1s;
 }
-
-@keyframes slow-reveal {
-    0% {max-height: 0px;}
-    100% {max-height: 6em;}
-}
-
 .column {
     display: flex;
     flex-direction: column;
@@ -55,6 +46,7 @@
 
 .reflections-container h2 {
     font-size: 3rem;
+    font-weight: 400;
 }
 
 .reflections-container button, .reflections-container button:hover {
