@@ -47,7 +47,7 @@
     100% {max-height: 6em;}
 }
 
-.reflections {
+.column {
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -71,6 +71,7 @@
 @media (max-width: 1200px) {
     .reflections-container {
         flex-direction: column;
+        gap: 2rem;
     }
     .reflections, .case-studies {
         opacity: 0;
