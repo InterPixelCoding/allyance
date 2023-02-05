@@ -91,6 +91,11 @@ fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}/values:ba
         timeline.removeChild(timeline.firstChild);
     }
 
+    // Append the sorted timeline items to the container
+    sortedTimelineItems.forEach(function(item) {
+        timeline.appendChild(item[0]);
+    });
+
     const skip = document.createElement('div');
     const skipAnchor = document.createElement('a');
     skip.appendChild(skipAnchor);
@@ -100,11 +105,6 @@ fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}/values:ba
     skipAnchor.href = '#today';
 
     timeline.appendChild(skip);
-
-    // Append the sorted timeline items to the container
-    sortedTimelineItems.forEach(function(item) {
-        timeline.appendChild(item[0]);
-    });
 
   })
 
