@@ -28,6 +28,10 @@ a {
     transition: all 0.2s ease-in-out;
 }
 
+h1:target {
+    color: #ff6a00;
+}
+
 a:hover {
     opacity: 100%;
 }
@@ -65,10 +69,8 @@ h1, h2, h3, h4, h5 {
 }
 
 .back-to-top {
-    position: relative;
-    padding: inherit;
-    margin: inherit;
     opacity: 0.25;
+    margin: 0 1rem;
 }
 
 .home > img {
