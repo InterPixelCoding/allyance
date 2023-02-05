@@ -1,28 +1,27 @@
 form {
-    height: auto;
-    display: flex;
-    padding: 30px;
-    flex-direction: column;
+    padding: 5vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     justify-content: center;
     align-items: center;
 }
 
-.credentials > input{
-    width: 39vw;
+.message{
+    grid-column: span 2;
 }
 
-form > div > * {
+form * {
     font-family: 'Raleway', sans-serif;
-    font-size: 1.5rem;
-    padding: 15px;
-    margin: 1vw;
-    border-radius: 5px;
+    font-size: 1rem;
+    padding: 0.75rem;
+    margin: 0.5rem;
+    border-radius: 3px;
     border: black 2px solid;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.306);
-    transition: all 0.2s ease-in-out;
+    transition: all 100ms ease-in-out;
 }
 
-form > div > *:hover, form > button:hover{
+form input:hover, form textarea:hover, form button:hover{
     border: #FF6B00 2px solid;
     background: transparent;
     box-shadow: 0 5px 10px #ff6a008a;
@@ -33,19 +32,33 @@ form > div > *:focus {
 }
 
 textarea {
-    width: 80vw;
-    height: 500px;
-    font-size: 0.5rem;
+    height: 25rem;
+    font-size: 1rem;
 }
 
 form > button {
+    outline: none;
     color: black;
     font-family: inherit;
-    font-size: 1.5rem;
+    font-size: 1rem;
     border-color: black;
-    right: 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.306);
+    grid-column: 2 / 3;
 }
 
 form > button:hover{color:#FF6B00}
+
+@media (max-width: 500px) {
+    form {padding: 1em;}
+    form * {
+        margin: 5px;
+        padding: 5px;
+    }
+}
+
+@media (max-width: 400px) {
+    form {grid-template-columns: 1fr;}
+    .message {grid-column: 1;}
+    form > button {grid-column: 1;}
+}
 

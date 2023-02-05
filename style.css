@@ -128,7 +128,7 @@ a.inner-p, a.inner-p:hover, a.inner-p:focus {
     text-decoration: underline black;
 }
 
-i.fa-solid.fa-angle-down{
+.horizontal i.fa-solid.fa-angle-down{
     color: #ff6a00;
 }
 
