@@ -324,10 +324,10 @@ nav ul{
 
 #dropbutton{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 
     align-items: center;
-    width: 150px;
+    gap: 1rem;
     padding: 0;
     margin: 0;
     border: none;
