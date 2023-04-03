@@ -8,7 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Yeseva+One&display=swap" rel="stylesheet">    <script src="https://kit.fontawesome.com/00c3160031.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="team.css">
+    <link rel="stylesheet" href="pdf.css">
+    <link rel="stylesheet" href="reflections.css">
     <script src="script.js" defer></script>
     <title>Allyance</title>
 </head>
@@ -66,7 +67,9 @@
         </div>
     </header>
     <div class="background section">
+        <div class="hover"></div>
         <image class="background-image"></image>
+        <h1 class="site-page-name">Resources</h1>
     </div>
     <nav class="horizontal">
         <ul>
@@ -100,12 +103,42 @@
             </div>
         </ul>
     </nav>
-    <div class="grow section">
-        <h1 class="subheading hidden">allyance</h1>
-        <p class="hidden">Allyance is an in-school counselling service which has been working in schools for the past twelve
-            years. We work with young people using appropriate therapies to support their mental health and
-            wellbeing. Referrals are made by the headteacher or a member of the leadership team of
-            participating schools that subscribe to our service.</p>
+    <div class="grow section reflections-container">
+        <div class="reflections column">
+            <button class="pdf-btn" aria-label="Rebuild">Anxiety Tools for parents</button>
+            <button class="pdf-btn" aria-label="parents">Allyance Official Booklet</button>
+            <a class="inner-p" style="font-size: 1.5rem" href="https://www.childrenssociety.org.uk/search?search=good+childhood+report&microsite=" target="_blank" rel="noopener noreferrer">Good Childhood Report 2022</a>
+        </div>
     </div>
+    <div class="pdf-container">
+        <div class="controls">
+            <button class="close-btn">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <a class="download-btn" href="" download="">
+                <i class="fa-solid fa-download"></i>
+            </a>
+        </div>
+        <iframe class="pdfView" src="./resources/CaseStudy.pdf"></iframe>
+    </div>
+    <script>
+        const iframeContainer = document.querySelector('.pdf-container')
+        const iframe = document.querySelector('.pdfView');
+        const downloadBtn = document.querySelector('.download-btn');
+        const closeBtn = document.querySelector('.close-btn')
+        const pdfButtons = document.querySelectorAll('.reflections-container button')
+        pdfButtons.forEach(button => {
+            button.addEventListener("click", function () {
+                iframeContainer.classList.toggle('open');
+                iframe.src = `./resources/${button.ariaLabel}.pdf#view=Fit&toolbar=0&statusbar=0&messages=0&navpanes=0&scrollbar=0`;
+                console.log(`${button.ariaLabel}.pdf`);
+                downloadBtn.href = `./resources/${button.ariaLabel}.pdf`
+                downloadBtn.download = `${button.ariaLabel}.pdf`
+            })
+        });
+        closeBtn.addEventListener("click", function() {
+            iframeContainer.classList.remove('open')
+        })
+    </script>
 </body>
 </html>

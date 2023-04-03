@@ -65,10 +65,6 @@
         flex-direction: column;
         gap: 2rem;
     }
-    .reflections, .case-studies {
-        opacity: 0;
-        animation: div-fade-in forwards 1s 40s ease-in-out;
-    }
 }
 
 @keyframes div-fade-in {

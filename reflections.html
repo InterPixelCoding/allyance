@@ -172,10 +172,6 @@ allyance Counsellor</pre>
         <iframe class="pdfView" src="./resources/CaseStudy.pdf"></iframe>
     </div>
     <script>
-        const stanzas = document.querySelectorAll('.poem-stanza');
-        stanzas.forEach(function (stanza, i) {
-            stanza.style.transitionDelay = `${(i-1) * 1}s`;
-        });
         const iframeContainer = document.querySelector('.pdf-container')
         const iframe = document.querySelector('.pdfView');
         const downloadBtn = document.querySelector('.download-btn');
