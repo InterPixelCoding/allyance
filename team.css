@@ -4,6 +4,7 @@
     --amy: #8C47C2;
     --helen: #BB1A1A;
     --karen: #FFFD58;
+    --jo: #004EAC;
 }
 
 .team {
@@ -20,7 +21,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transform: translateX(calc(-50px * var(--order)));
 }
 
 .team > div > h1 {
@@ -95,10 +95,14 @@
 .helen img{border-color: var(--helen)}
 .karen img{border-color: var(--karen)}
 .amy img{border-color: var(--amy)}
+.jo img{border-color: var(--jo)}
 
-.team div.show {
-    transition: all 1s ease-out;
-    transition-delay: calc(300ms * var(--order));
-    transform: translateX(0px);
-    filter: none;
+@media (min-width: 1500px) {
+    .team div {transform: translateX(calc(-50px * var(--order)));}
+    .team div.show {
+        transition: all 1s ease-out;
+        transition-delay: calc(300ms * var(--order));
+        transform: translateX(0px);
+        filter: none;
+    }
 }

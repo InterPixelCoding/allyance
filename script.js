@@ -60,9 +60,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
 			if (entry.isIntersecting) {
 				entry.target.classList.add('show');
 			} 
-			else if (entry.target.classList.contains('poem-stanza') == false) {
-				entry.target.classList.remove('show');
-			}
 		}))
 	})
 
@@ -109,5 +106,10 @@ function karen() {
 }
 function amy() {
 	const amymore = document.querySelector('.amy > p');
+	amymore.classList.toggle('show-less')
+}
+
+function jo() {
+	const amymore = document.querySelector('.jo > p');
 	amymore.classList.toggle('show-less')
 }
